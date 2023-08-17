@@ -14,4 +14,4 @@ By the end of this workshop, you will have gained valuable hands-on experience i
 
 This is a 300-level workshop, so familiarly with Python and using the terminal is helpful. No AI/ML experience is necessary. This workshop is intended to be finished within 2 hours.
 
-The link to the worshop is [here](https://catalog.us-east-1.prod.workshops.aws/workshops/e96d2be2-5070-4e75-abc2-09c301199c4b/en-US)
+The link to the worshop is [here](https://sanghwa.gitbook.io/amazon-bedrock-ai/)
