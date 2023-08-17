@@ -1,9 +1,10 @@
 # Import libraries
 import streamlit as st
-from bedrock_tools import AWSWellArchTool, CodeGenerationTool
+from bedrock_tools import AWSWellArchTool, CodeGenerationTool, InternetQueryTool
 
 well_arch_tool = AWSWellArchTool()
 code_gen_tool = CodeGenerationTool()
+internet_query_tool = InternetQueryTool()
 
 
 def app() -> None:
@@ -18,7 +19,8 @@ def app() -> None:
 
     # Choose tool
     current_tool = st.selectbox(
-        "Choose Tool:", ["AWS Well Architected Tool", "Code Generation Tool"]
+        "Choose Tool:",
+        ["AWS Well Architected Tool", "Internet Query Tool", "Code Generation Tool"],
     )
 
     query = st.text_input("Query:")
@@ -27,6 +29,8 @@ def app() -> None:
         with st.spinner("Generating..."):
             if current_tool == "AWS Well Architected Tool":
                 answer = well_arch_tool(query)
+            elif current_tool == "Internet Query Tool":
+                answer = internet_query_tool(query)
             elif current_tool == "Code Generation Tool":
                 answer = code_gen_tool(query)
 

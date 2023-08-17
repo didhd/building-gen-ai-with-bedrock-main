@@ -5,3 +5,6 @@ transformers
 langchain
 faiss-cpu
 requests
+wikipedia
+unstructured
+pdfplumber
